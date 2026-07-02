@@ -174,6 +174,52 @@
   });
 
   // ===================================================================
+  // PROJECT CAROUSEL
+  // ===================================================================
+  const carousel = document.querySelector('.project-carousel');
+  const track = document.getElementById('projectTrack');
+  const prevBtn = document.getElementById('prevProject');
+  const nextBtn = document.getElementById('nextProject');
+  const dots = document.querySelectorAll('#projectDots .dot');
+
+  if (carousel && track && dots.length) {
+    let current = 0;
+    const total = dots.length;
+
+    function renderCarousel() {
+      const width = carousel.offsetWidth;
+      track.style.transform = `translateX(-${current * width}px)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    function goTo(index) {
+      current = (index + total) % total;
+      renderCarousel();
+    }
+
+    prevBtn?.addEventListener('click', () => goTo(current - 1));
+    nextBtn?.addEventListener('click', () => goTo(current + 1));
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => goTo(parseInt(dot.dataset.index, 10)));
+    });
+
+    window.addEventListener('resize', renderCarousel);
+    renderCarousel();
+
+    // basic swipe support for touch devices
+    let touchStartX = 0;
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    track.addEventListener('touchend', (e) => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 50) {
+        dx < 0 ? goTo(current + 1) : goTo(current - 1);
+      }
+    }, { passive: true });
+  }
+
+  // ===================================================================
   // CONTACT FORM -> mailto (static site, no backend)
   // ===================================================================
   const contactForm = document.getElementById('contactForm');
