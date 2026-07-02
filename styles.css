@@ -585,17 +585,17 @@
     background:var(--surface);
     border:1px solid var(--border-soft);
     border-radius:10px;
-    padding:24px;
+    padding:20px;
+    max-width:480px;
   }
   .resume-preview{
     width:100%;
-    aspect-ratio:8.5 / 11;
-    max-height:820px;
+    height:420px;
     background:var(--bg);
     border:1px solid var(--border);
     border-radius:6px;
     overflow:hidden;
-    margin-bottom:22px;
+    margin-bottom:18px;
   }
   .resume-preview iframe{
     width:100%;
@@ -605,13 +605,19 @@
   }
   .resume-actions{
     display:flex;
-    gap:14px;
+    gap:12px;
     flex-wrap:wrap;
+  }
+  .resume-actions .btn{
+    flex:1;
+    justify-content:center;
+    white-space:nowrap;
   }
   .resume-actions .btn i{font-size:14px;}
 
   @media (max-width:640px){
-    .resume-preview{aspect-ratio:8.5/13;max-height:70vh;}
+    .resume-panel{max-width:100%;}
+    .resume-preview{height:360px;}
   }
 
   /* ---------- CONTACT / FOOTER ---------- */
