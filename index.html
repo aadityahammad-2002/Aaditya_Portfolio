@@ -24,6 +24,7 @@
     <a href="#home" class="nav-mark">AH<span style="color:var(--text-faint)">.dev</span></a>
     <div class="nav-links">
       <a href="#home" class="nav-link" data-section="home">home</a>
+      <a href="#stack" class="nav-link" data-section="stack">stack</a>
       <a href="#projects" class="nav-link" data-section="projects">projects</a>
       <a href="#resume" class="nav-link" data-section="resume">resume</a>
       <a href="#contact" class="nav-link" data-section="contact">contact</a>
@@ -31,68 +32,68 @@
   </div>
 </nav>
 
-<!-- ================= HOME ================= -->
-<header class="hero" id="home">
+<!-- ================= SLIDE 1 — HOME ================= -->
+<section class="slide" id="home">
   <div class="wrap">
-    <div class="terminal-line">$ whoami<span class="cursor"></span></div>
-    <h1 class="name">Aaditya <em>Hammad</em></h1>
-    <div class="tagline">Software Engineer<span class="sep">·</span>Java &amp; Spring Boot<span class="sep">·</span>React<span class="sep">·</span>Spring AI</div>
-    <p class="hero-desc">I build scalable backend services and the APIs that hold them together — with a growing focus on wiring LLMs into real developer workflows. Comfortable across the stack, from MySQL indexing to CI/CD pipelines.</p>
+    <div class="slide-grid home-grid">
 
-    <div class="status-pill"><span class="dot"></span>Available for new opportunities</div>
+      <div class="home-left">
+        <div class="terminal-line">$ whoami<span class="cursor"></span></div>
+        <h1 class="name">Aaditya <em>Hammad</em></h1>
+        <div class="tagline">Software Engineer<span class="sep">·</span>Java &amp; Spring Boot<span class="sep">·</span>React<span class="sep">·</span>Spring AI</div>
+        <p class="hero-desc">I build scalable backend services and the APIs that hold them together — with a growing focus on wiring LLMs into real developer workflows. Comfortable across the stack, from MySQL indexing to CI/CD pipelines.</p>
 
-    <div class="cta-row">
-      <a href="#projects" class="btn btn-primary magnetic">View Projects →</a>
-      <a href="#contact" class="btn btn-ghost magnetic">Get in Touch</a>
-    </div>
+        <div class="current-role-badge">
+          <i class="bi bi-briefcase"></i>
+          <div>
+            <div class="crb-role">Java Developer Intern <span class="crb-org">· CoderVu InfoTech</span></div>
+            <div class="crb-date">Sep 2025 — Feb 2026 · Indore, MP</div>
+          </div>
+        </div>
 
-    <div class="stats-bar fade-in" style="margin-top:56px;">
-      <div class="stat-cell">
-        <div class="stat-num" data-count="40" data-suffix="%">0%</div>
-        <div class="stat-label">FASTER DB QUERIES</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-num" data-count="5" data-suffix="">0</div>
-        <div class="stat-label">MODULES IN CULTIVATIONX</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-num" data-count="2" data-suffix="">0</div>
-        <div class="stat-label">FULL-STACK PROJECTS SHIPPED</div>
-      </div>
-    </div>
-  </div>
-</header>
+        <div class="status-pill"><span class="dot"></span>Available for new opportunities</div>
 
-<section id="experience">
-  <div class="wrap fade-in">
-    <div class="eyebrow">// experience.log</div>
-    <h2 class="section-title">Where I've worked</h2>
+        <div class="cta-row">
+          <a href="#projects" class="btn btn-primary magnetic">View Projects →</a>
+          <a href="#contact" class="btn btn-ghost magnetic">Get in Touch</a>
+        </div>
+      </div>
 
-    <div class="exp-card">
-      <div class="exp-meta">
-        Sep 2025 — Feb 2026<br>
-        Indore, MP<br>
-        Internship
+      <div class="home-right">
+        <div class="edu-panel">
+          <div class="eyebrow">// education</div>
+          <div class="edu-card-v2">
+            <div class="edu-degree">B.Tech, Computer Science Engineering</div>
+            <div class="edu-school">Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore, MP</div>
+            <div class="edu-date-v2">Sep 2021 — June 2025</div>
+          </div>
+        </div>
+
+        <div class="stats-bar-v2">
+          <div class="stat-cell-v2">
+            <div class="stat-num" data-count="40" data-suffix="%">0%</div>
+            <div class="stat-label">FASTER DB QUERIES</div>
+          </div>
+          <div class="stat-cell-v2">
+            <div class="stat-num" data-count="5" data-suffix="">0</div>
+            <div class="stat-label">MODULES IN CULTIVATIONX</div>
+          </div>
+          <div class="stat-cell-v2">
+            <div class="stat-num" data-count="2" data-suffix="">0</div>
+            <div class="stat-label">FULL-STACK PROJECTS</div>
+          </div>
+        </div>
       </div>
-      <div>
-        <div class="exp-role">Java Developer Intern</div>
-        <div class="exp-org">CoderVu InfoTech</div>
-        <ul class="exp-list stagger">
-          <li>Built scalable backend services with Spring Boot and Hibernate; optimized MySQL performance via indexing, achieving <strong>40% faster queries</strong>.</li>
-          <li>Designed RESTful APIs with comprehensive documentation for seamless frontend integration.</li>
-          <li>Containerized deployments with Docker and automated CI/CD via GitHub Actions.</li>
-          <li>Leveraged Spring AI to integrate multiple LLM providers with robust error handling and fallback mechanisms.</li>
-          <li>Secured applications using JWT authentication and Spring Security.</li>
-        </ul>
-      </div>
+
     </div>
   </div>
 </section>
 
-<section id="skills">
+<!-- ================= SLIDE 2 — TECH STACK ================= -->
+<section class="slide" id="stack">
   <div class="wrap fade-in">
     <div class="eyebrow">// stack.manifest</div>
-    <h2 class="section-title">What I work with</h2>
+    <h2 class="section-title">What I work <em>with</em>.</h2>
 
     <div class="skill-icon-grid">
       <div class="skill-icon-card"><i class="devicon-java-plain colored"></i><span>Java</span></div>
@@ -124,131 +125,101 @@
   </div>
 </section>
 
-<section id="education">
-  <div class="wrap fade-in">
-    <div class="eyebrow">// education</div>
-    <h2 class="section-title">Foundation</h2>
-    <div class="edu-card">
-      <div>
-        <div class="edu-degree">B.Tech, Computer Science Engineering</div>
-        <div class="edu-school">Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore, MP</div>
-      </div>
-      <div class="edu-date">Sep 2021 — June 2025</div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PROJECTS ================= -->
-<section id="projects">
+<!-- ================= SLIDE 3 — PROJECTS ================= -->
+<section class="slide" id="projects">
   <div class="wrap fade-in">
     <div class="eyebrow">~/projects</div>
     <h2 class="section-title">Things I've <em>built</em>.</h2>
-    <p class="hero-desc" style="margin-bottom:44px;">A modular AI-powered career platform and a full-stack HR system — both built end-to-end, from database indexing to deployment.</p>
+    <p class="hero-desc" style="margin-bottom:36px;">A modular AI-powered career platform and a full-stack HR system — both built end-to-end, from database indexing to deployment.</p>
 
-    <!-- CultivationX -->
-    <div class="project">
-      <a href="https://cultivation-x-indol.vercel.app/login" class="project-preview preview-cultivationx" target="_blank" rel="noopener" aria-label="Open CultivationX project">
-        <div class="preview-grid"></div>
-        <div class="preview-tag">// cultivationx</div>
-        <div class="preview-glyph">CX</div>
-        <div class="preview-overlay"><span>Open live project</span><span class="arrow">↗</span></div>
-      </a>
-      <div class="project-body">
-        <div class="project-head">
-          <div>
-            <div class="project-title">CultivationX</div>
-            <div class="project-sub">AI-powered developer career growth platform</div>
+    <div class="project-carousel">
+      <div class="project-track" id="projectTrack">
+
+        <!-- CultivationX -->
+        <article class="project-slide-card">
+          <div class="proj-left preview-cultivationx">
+            <div class="preview-grid"></div>
+            <div class="preview-tag">// cultivationx</div>
+            <div class="preview-glyph">CX</div>
+            <div class="proj-left-body">
+              <div class="project-title">CultivationX</div>
+              <div class="project-sub">AI-powered developer career growth platform</div>
+              <div class="tags">
+                <span class="tag">Spring Boot 3.5</span>
+                <span class="tag">React</span>
+                <span class="tag">Spring AI</span>
+                <span class="tag">Groq LLM</span>
+                <span class="tag">Docker</span>
+                <span class="tag">CI/CD</span>
+              </div>
+              <div class="proj-link-row">
+                <a href="https://cultivation-x-indol.vercel.app/login" target="_blank" rel="noopener" class="btn btn-primary magnetic">Live Demo ↗</a>
+                <a href="https://github.com/aadityahammad-2002" target="_blank" rel="noopener" class="gh-link">GitHub ↗</a>
+              </div>
+            </div>
           </div>
-          <a href="https://github.com/aadityahammad-2002" class="gh-link" target="_blank" rel="noopener">View on GitHub ↗</a>
-        </div>
-        <p class="project-desc">A Spring Boot 3.5 modular monolith unifying resume analysis, AI code mentoring, and GitHub/LeetCode activity tracking — turning scattered developer signals into one composite readiness score.</p>
+          <div class="proj-right">
+            <p class="project-desc">A Spring Boot 3.5 modular monolith unifying resume analysis, AI code mentoring, and GitHub/LeetCode activity tracking — turning scattered developer signals into one composite readiness score.</p>
+            <ul class="project-list stagger">
+              <li><strong>Resume intelligence:</strong> AI-powered parsing and ATS scoring using Apache Tika/PDFBox and Spring AI, generating personalized learning roadmaps via Groq LLM.</li>
+              <li><strong>AI coding mentor:</strong> conversational memory, code review across correctness/performance/security, and optimized-solution generation.</li>
+              <li><strong>Live activity sync:</strong> GitHub OAuth and LeetCode GraphQL integration with a scheduled sync engine.</li>
+              <li><strong>"LeetGit" pipeline:</strong> AI-reviews LeetCode submissions and auto-pushes formatted solutions with interview notes to GitHub.</li>
+            </ul>
+          </div>
+        </article>
 
-        <div class="diagram-wrap">
-          <svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg">
-            <line class="diagram-line" x1="260" y1="150" x2="260" y2="55"/>
-            <line class="diagram-line" x1="260" y1="150" x2="420" y2="90"/>
-            <line class="diagram-line" x1="260" y1="150" x2="440" y2="220"/>
-            <line class="diagram-line" x1="260" y1="150" x2="100" y2="220"/>
-            <line class="diagram-line" x1="260" y1="150" x2="80" y2="90"/>
+        <!-- HRMS -->
+        <article class="project-slide-card">
+          <div class="proj-left preview-hrms">
+            <div class="preview-grid"></div>
+            <div class="preview-tag">// hrms-portal</div>
+            <div class="preview-glyph">HR</div>
+            <div class="proj-left-body">
+              <div class="project-title">HRMS Portal</div>
+              <div class="project-sub">Full-stack Human Resource Management System</div>
+              <div class="tags">
+                <span class="tag">Spring Boot</span>
+                <span class="tag">React</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">JWT</span>
+                <span class="tag">Docker</span>
+              </div>
+              <div class="proj-link-row">
+                <a href="https://github.com/aadityahammad-2002" target="_blank" rel="noopener" class="gh-link">View on GitHub ↗</a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-right">
+            <p class="project-desc">An end-to-end HR platform with multi-role access for Admin, HR, and Employee users — built to cut manual overhead out of everyday HR operations.</p>
+            <ul class="project-list stagger">
+              <li><strong>Role-based security:</strong> JWT-based authentication and RBAC to protect sensitive employee data.</li>
+              <li><strong>Consistent deployments:</strong> containerized backend services with Docker for environment parity.</li>
+              <li><strong>Automated workflows:</strong> attendance and payroll processes automated to reduce manual HR effort.</li>
+            </ul>
+          </div>
+        </article>
 
-            <circle class="node-circle core" cx="260" cy="150" r="34"/>
-            <text class="node-label core" x="260" y="154" text-anchor="middle">Core</text>
-
-            <circle class="node-circle" cx="260" cy="40" r="26"/>
-            <text class="node-label" x="260" y="44" text-anchor="middle">Rise</text>
-
-            <circle class="node-circle" cx="440" cy="82" r="26"/>
-            <text class="node-label" x="440" y="86" text-anchor="middle">Mentor</text>
-
-            <circle class="node-circle" cx="462" cy="230" r="26"/>
-            <text class="node-label" x="462" y="234" text-anchor="middle">Nexus</text>
-
-            <circle class="node-circle" cx="80" cy="230" r="26"/>
-            <text class="node-label" x="80" y="234" text-anchor="middle">DevDNA</text>
-
-            <circle class="node-circle" cx="58" cy="82" r="26"/>
-            <text class="node-label" x="58" y="86" text-anchor="middle">Dashboard</text>
-          </svg>
-        </div>
-
-        <ul class="project-list stagger">
-          <li><strong>Resume intelligence:</strong> AI-powered parsing and ATS scoring using Apache Tika/PDFBox and Spring AI, extracting skills and generating personalized learning roadmaps via Groq LLM.</li>
-          <li><strong>AI coding mentor:</strong> conversational memory, code review across correctness/performance/security, and optimized-solution generation.</li>
-          <li><strong>Live activity sync:</strong> GitHub OAuth and LeetCode GraphQL integration with a scheduled sync engine tracking real developer activity.</li>
-          <li><strong>"LeetGit" pipeline:</strong> AI-reviews LeetCode submissions and auto-pushes formatted solutions with complexity analysis and interview notes to GitHub.</li>
-        </ul>
-
-        <div class="tags">
-          <span class="tag">Spring Boot 3.5</span>
-          <span class="tag">React</span>
-          <span class="tag">Spring AI</span>
-          <span class="tag">Groq LLM</span>
-          <span class="tag">Docker</span>
-          <span class="tag">CI/CD</span>
-        </div>
       </div>
-    </div>
 
-    <!-- HRMS -->
-    <div class="project">
-      <a href="https://github.com/aadityahammad-2002" class="project-preview preview-hrms" target="_blank" rel="noopener" aria-label="Open HRMS Portal project">
-        <div class="preview-grid"></div>
-        <div class="preview-tag">// hrms-portal</div>
-        <div class="preview-glyph">HR</div>
-        <div class="preview-overlay"><span>View on GitHub</span><span class="arrow">↗</span></div>
-      </a>
-      <div class="project-body">
-        <div class="project-head">
-          <div>
-            <div class="project-title">HRMS Portal</div>
-            <div class="project-sub">Full-stack Human Resource Management System</div>
-          </div>
-          <a href="https://github.com/aadityahammad-2002" class="gh-link" target="_blank" rel="noopener">View on GitHub ↗</a>
+      <div class="carousel-controls">
+        <button class="carousel-arrow" id="prevProject" aria-label="Previous project"><i class="bi bi-arrow-left"></i></button>
+        <div class="carousel-dots" id="projectDots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
         </div>
-        <p class="project-desc">An end-to-end HR platform with multi-role access for Admin, HR, and Employee users — built to cut manual overhead out of everyday HR operations.</p>
-        <ul class="project-list stagger">
-          <li><strong>Role-based security:</strong> JWT-based authentication and RBAC to protect sensitive employee data.</li>
-          <li><strong>Consistent deployments:</strong> containerized backend services with Docker for environment parity.</li>
-          <li><strong>Automated workflows:</strong> attendance and payroll processes automated to reduce manual HR effort.</li>
-        </ul>
-        <div class="tags">
-          <span class="tag">Spring Boot</span>
-          <span class="tag">React</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">JWT</span>
-          <span class="tag">Docker</span>
-        </div>
+        <button class="carousel-arrow" id="nextProject" aria-label="Next project"><i class="bi bi-arrow-right"></i></button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= RESUME ================= -->
-<section id="resume">
-  <div class="wrap fade-in">
+<!-- ================= SLIDE 4 — RESUME ================= -->
+<section class="slide" id="resume">
+  <div class="wrap fade-in resume-wrap">
     <div class="eyebrow">// resume.pdf</div>
     <h2 class="section-title">My <em>resume</em>.</h2>
-    <p class="hero-desc" style="margin-bottom:36px;">Everything above, in one page — view it inline or grab a copy.</p>
+    <p class="hero-desc" style="margin-bottom:32px;">Everything above, in one page — view it inline or grab a copy.</p>
 
     <div class="resume-panel">
       <div class="resume-preview">
@@ -266,12 +237,12 @@
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact">
+<!-- ================= SLIDE 5 — CONTACT ================= -->
+<section class="slide" id="contact">
   <div class="wrap fade-in">
     <div class="eyebrow">// get.in.touch</div>
     <h2 class="section-title">Let's build <em>something</em>.</h2>
-    <p class="hero-desc" style="margin-bottom:44px;">Open to backend and full-stack roles where I can ship real systems — reach out any time.</p>
+    <p class="hero-desc" style="margin-bottom:36px;">Open to backend and full-stack roles where I can ship real systems — reach out any time.</p>
 
     <div class="contact-grid">
       <div class="contact-info">
@@ -317,13 +288,8 @@
   </div>
 </section>
 
-<footer style="padding:50px 0;">
+<footer class="no-snap" style="padding:40px 0;">
   <div class="wrap" style="text-align:center;">
-    <div class="social-row" style="justify-content:center;margin-bottom:20px;">
-      <a href="https://github.com/aadityahammad-2002" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/in/aaditya-hammad-718904271/" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-      <a href="https://www.instagram.com/__aaditya__21" class="social-icon"  target="_blank" rel="noopener" aria-label="Instagram (coming soon)"><i class="bi bi-instagram"></i></a>
-    </div>
     <div class="foot-note">© 2026 Aaditya Hammad. Built with care.</div>
   </div>
 </footer>
