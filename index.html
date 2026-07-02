@@ -21,16 +21,18 @@
 
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-mark">AH<span style="color:var(--text-faint)">.dev</span></a>
+    <a href="#home" class="nav-mark">AH<span style="color:var(--text-faint)">.dev</span></a>
     <div class="nav-links">
-      <a href="index.html" class="active">home</a>
-      <a href="projects.html">projects</a>
-      <a href="contact.html">contact</a>
+      <a href="#home" class="nav-link" data-section="home">home</a>
+      <a href="#projects" class="nav-link" data-section="projects">projects</a>
+      <a href="#resume" class="nav-link" data-section="resume">resume</a>
+      <a href="#contact" class="nav-link" data-section="contact">contact</a>
     </div>
   </div>
 </nav>
 
-<header class="hero">
+<!-- ================= HOME ================= -->
+<header class="hero" id="home">
   <div class="wrap">
     <div class="terminal-line">$ whoami<span class="cursor"></span></div>
     <h1 class="name">Aaditya <em>Hammad</em></h1>
@@ -40,8 +42,8 @@
     <div class="status-pill"><span class="dot"></span>Available for new opportunities</div>
 
     <div class="cta-row">
-      <a href="projects.html" class="btn btn-primary magnetic">View Projects →</a>
-      <a href="contact.html" class="btn btn-ghost magnetic">Get in Touch</a>
+      <a href="#projects" class="btn btn-primary magnetic">View Projects →</a>
+      <a href="#contact" class="btn btn-ghost magnetic">Get in Touch</a>
     </div>
 
     <div class="stats-bar fade-in" style="margin-top:56px;">
@@ -136,12 +138,181 @@
   </div>
 </section>
 
-<section>
-  <div class="wrap fade-in" style="text-align:center;">
-    <div class="contact-title" style="font-size:clamp(28px,4vw,42px);">Want to see the work? <em>Head over →</em></div>
-    <div class="home-links-row" style="justify-content:center;margin-top:24px;">
-      <a href="projects.html" class="btn btn-primary magnetic">View Projects →</a>
-      <a href="contact.html" class="btn btn-ghost magnetic">Contact Me</a>
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <div class="wrap fade-in">
+    <div class="eyebrow">~/projects</div>
+    <h2 class="section-title">Things I've <em>built</em>.</h2>
+    <p class="hero-desc" style="margin-bottom:44px;">A modular AI-powered career platform and a full-stack HR system — both built end-to-end, from database indexing to deployment.</p>
+
+    <!-- CultivationX -->
+    <div class="project">
+      <a href="https://cultivation-x-indol.vercel.app/login" class="project-preview preview-cultivationx" target="_blank" rel="noopener" aria-label="Open CultivationX project">
+        <div class="preview-grid"></div>
+        <div class="preview-tag">// cultivationx</div>
+        <div class="preview-glyph">CX</div>
+        <div class="preview-overlay"><span>Open live project</span><span class="arrow">↗</span></div>
+      </a>
+      <div class="project-body">
+        <div class="project-head">
+          <div>
+            <div class="project-title">CultivationX</div>
+            <div class="project-sub">AI-powered developer career growth platform</div>
+          </div>
+          <a href="https://github.com/aadityahammad-2002" class="gh-link" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+        <p class="project-desc">A Spring Boot 3.5 modular monolith unifying resume analysis, AI code mentoring, and GitHub/LeetCode activity tracking — turning scattered developer signals into one composite readiness score.</p>
+
+        <div class="diagram-wrap">
+          <svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg">
+            <line class="diagram-line" x1="260" y1="150" x2="260" y2="55"/>
+            <line class="diagram-line" x1="260" y1="150" x2="420" y2="90"/>
+            <line class="diagram-line" x1="260" y1="150" x2="440" y2="220"/>
+            <line class="diagram-line" x1="260" y1="150" x2="100" y2="220"/>
+            <line class="diagram-line" x1="260" y1="150" x2="80" y2="90"/>
+
+            <circle class="node-circle core" cx="260" cy="150" r="34"/>
+            <text class="node-label core" x="260" y="154" text-anchor="middle">Core</text>
+
+            <circle class="node-circle" cx="260" cy="40" r="26"/>
+            <text class="node-label" x="260" y="44" text-anchor="middle">Rise</text>
+
+            <circle class="node-circle" cx="440" cy="82" r="26"/>
+            <text class="node-label" x="440" y="86" text-anchor="middle">Mentor</text>
+
+            <circle class="node-circle" cx="462" cy="230" r="26"/>
+            <text class="node-label" x="462" y="234" text-anchor="middle">Nexus</text>
+
+            <circle class="node-circle" cx="80" cy="230" r="26"/>
+            <text class="node-label" x="80" y="234" text-anchor="middle">DevDNA</text>
+
+            <circle class="node-circle" cx="58" cy="82" r="26"/>
+            <text class="node-label" x="58" y="86" text-anchor="middle">Dashboard</text>
+          </svg>
+        </div>
+
+        <ul class="project-list stagger">
+          <li><strong>Resume intelligence:</strong> AI-powered parsing and ATS scoring using Apache Tika/PDFBox and Spring AI, extracting skills and generating personalized learning roadmaps via Groq LLM.</li>
+          <li><strong>AI coding mentor:</strong> conversational memory, code review across correctness/performance/security, and optimized-solution generation.</li>
+          <li><strong>Live activity sync:</strong> GitHub OAuth and LeetCode GraphQL integration with a scheduled sync engine tracking real developer activity.</li>
+          <li><strong>"LeetGit" pipeline:</strong> AI-reviews LeetCode submissions and auto-pushes formatted solutions with complexity analysis and interview notes to GitHub.</li>
+        </ul>
+
+        <div class="tags">
+          <span class="tag">Spring Boot 3.5</span>
+          <span class="tag">React</span>
+          <span class="tag">Spring AI</span>
+          <span class="tag">Groq LLM</span>
+          <span class="tag">Docker</span>
+          <span class="tag">CI/CD</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- HRMS -->
+    <div class="project">
+      <a href="https://github.com/aadityahammad-2002" class="project-preview preview-hrms" target="_blank" rel="noopener" aria-label="Open HRMS Portal project">
+        <div class="preview-grid"></div>
+        <div class="preview-tag">// hrms-portal</div>
+        <div class="preview-glyph">HR</div>
+        <div class="preview-overlay"><span>View on GitHub</span><span class="arrow">↗</span></div>
+      </a>
+      <div class="project-body">
+        <div class="project-head">
+          <div>
+            <div class="project-title">HRMS Portal</div>
+            <div class="project-sub">Full-stack Human Resource Management System</div>
+          </div>
+          <a href="https://github.com/aadityahammad-2002" class="gh-link" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+        <p class="project-desc">An end-to-end HR platform with multi-role access for Admin, HR, and Employee users — built to cut manual overhead out of everyday HR operations.</p>
+        <ul class="project-list stagger">
+          <li><strong>Role-based security:</strong> JWT-based authentication and RBAC to protect sensitive employee data.</li>
+          <li><strong>Consistent deployments:</strong> containerized backend services with Docker for environment parity.</li>
+          <li><strong>Automated workflows:</strong> attendance and payroll processes automated to reduce manual HR effort.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Spring Boot</span>
+          <span class="tag">React</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">JWT</span>
+          <span class="tag">Docker</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESUME ================= -->
+<section id="resume">
+  <div class="wrap fade-in">
+    <div class="eyebrow">// resume.pdf</div>
+    <h2 class="section-title">My <em>resume</em>.</h2>
+    <p class="hero-desc" style="margin-bottom:36px;">Everything above, in one page — view it inline or grab a copy.</p>
+
+    <div class="resume-panel">
+      <div class="resume-preview">
+        <iframe src="Aaditya_Hammad_Resume.pdf" title="Aaditya Hammad Resume" loading="lazy"></iframe>
+      </div>
+      <div class="resume-actions">
+        <a href="Aaditya_Hammad_Resume.pdf" target="_blank" rel="noopener" class="btn btn-primary magnetic">
+          <i class="bi bi-eye"></i> View Full Screen
+        </a>
+        <a href="Aaditya_Hammad_Resume.pdf" download="Aaditya_Hammad_Resume.pdf" class="btn btn-ghost magnetic">
+          <i class="bi bi-download"></i> Download PDF
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="wrap fade-in">
+    <div class="eyebrow">// get.in.touch</div>
+    <h2 class="section-title">Let's build <em>something</em>.</h2>
+    <p class="hero-desc" style="margin-bottom:44px;">Open to backend and full-stack roles where I can ship real systems — reach out any time.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-quick">
+          <a href="mailto:aadityahammad@gmail.com"><i class="bi bi-envelope"></i>aadityahammad@gmail.com</a>
+          <a href="tel:+919584564710"><i class="bi bi-telephone"></i>+91 95845 64710</a>
+        </div>
+
+        <div class="social-row">
+          <a href="https://github.com/aadityahammad-2002" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/aaditya-hammad-718904271/" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com/__aaditya__21" class="social-icon" target="_blank" rel="noopener" aria-label="Instagram (coming soon)"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="fname">FIRST NAME</label>
+            <input type="text" id="fname" name="fname" required>
+          </div>
+          <div class="field">
+            <label for="lname">LAST NAME</label>
+            <input type="text" id="lname" name="lname" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">EMAIL</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field">
+          <label for="subject">SUBJECT</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="field">
+          <label for="message">MESSAGE</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="form-submit magnetic">Send Message →</button>
+        <div class="form-note" id="formNote">Opens your email app with this filled in — no server needed.</div>
+      </form>
     </div>
   </div>
 </section>
