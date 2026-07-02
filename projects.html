@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Aaditya Hammad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.15.1/devicon.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="ambient"><span class="b1"></span><span class="b2"></span></div>
+<div class="grain"></div>
+<div class="progress-bar" id="progressBar"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-mark">AH<span style="color:var(--text-faint)">.dev</span></a>
+    <div class="nav-links">
+      <a href="index.html">home</a>
+      <a href="projects.html" class="active">projects</a>
+      <a href="contact.html">contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">~/projects</div>
+    <h1>Things I've <em>built</em>.</h1>
+    <p>A modular AI-powered career platform and a full-stack HR system — both built end-to-end, from database indexing to deployment.</p>
+  </div>
+</div>
+
+<section id="projects" style="border-top:none;padding-top:20px;">
+  <div class="wrap fade-in">
+
+    <!-- CultivationX -->
+    <div class="project">
+      <a href="https://cultivation-x-indol.vercel.app/login" class="project-preview preview-cultivationx" target="_blank" rel="noopener" aria-label="Open CultivationX project">
+        <div class="preview-grid"></div>
+        <div class="preview-tag">// cultivationx</div>
+        <div class="preview-glyph">CX</div>
+        <div class="preview-overlay"><span>Open live project</span><span class="arrow">↗</span></div>
+      </a>
+      <div class="project-body">
+        <div class="project-head">
+          <div>
+            <div class="project-title">CultivationX</div>
+            <div class="project-sub">AI-powered developer career growth platform</div>
+          </div>
+          <a href="https://github.com/aadityahammad-2002" class="gh-link" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+        <p class="project-desc">A Spring Boot 3.5 modular monolith unifying resume analysis, AI code mentoring, and GitHub/LeetCode activity tracking — turning scattered developer signals into one composite readiness score.</p>
+
+        <div class="diagram-wrap">
+          <svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg">
+            <line class="diagram-line" x1="260" y1="150" x2="260" y2="55"/>
+            <line class="diagram-line" x1="260" y1="150" x2="420" y2="90"/>
+            <line class="diagram-line" x1="260" y1="150" x2="440" y2="220"/>
+            <line class="diagram-line" x1="260" y1="150" x2="100" y2="220"/>
+            <line class="diagram-line" x1="260" y1="150" x2="80" y2="90"/>
+
+            <circle class="node-circle core" cx="260" cy="150" r="34"/>
+            <text class="node-label core" x="260" y="154" text-anchor="middle">Core</text>
+
+            <circle class="node-circle" cx="260" cy="40" r="26"/>
+            <text class="node-label" x="260" y="44" text-anchor="middle">Rise</text>
+
+            <circle class="node-circle" cx="440" cy="82" r="26"/>
+            <text class="node-label" x="440" y="86" text-anchor="middle">Mentor</text>
+
+            <circle class="node-circle" cx="462" cy="230" r="26"/>
+            <text class="node-label" x="462" y="234" text-anchor="middle">Nexus</text>
+
+            <circle class="node-circle" cx="80" cy="230" r="26"/>
+            <text class="node-label" x="80" y="234" text-anchor="middle">DevDNA</text>
+
+            <circle class="node-circle" cx="58" cy="82" r="26"/>
+            <text class="node-label" x="58" y="86" text-anchor="middle">Dashboard</text>
+          </svg>
+        </div>
+
+        <ul class="project-list stagger">
+          <li><strong>Resume intelligence:</strong> AI-powered parsing and ATS scoring using Apache Tika/PDFBox and Spring AI, extracting skills and generating personalized learning roadmaps via Groq LLM.</li>
+          <li><strong>AI coding mentor:</strong> conversational memory, code review across correctness/performance/security, and optimized-solution generation.</li>
+          <li><strong>Live activity sync:</strong> GitHub OAuth and LeetCode GraphQL integration with a scheduled sync engine tracking real developer activity.</li>
+          <li><strong>"LeetGit" pipeline:</strong> AI-reviews LeetCode submissions and auto-pushes formatted solutions with complexity analysis and interview notes to GitHub.</li>
+        </ul>
+
+        <div class="tags">
+          <span class="tag">Spring Boot 3.5</span>
+          <span class="tag">React</span>
+          <span class="tag">Spring AI</span>
+          <span class="tag">Groq LLM</span>
+          <span class="tag">Docker</span>
+          <span class="tag">CI/CD</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- HRMS -->
+    <div class="project">
+      <a href="https://github.com/aadityahammad-2002" class="project-preview preview-hrms" target="_blank" rel="noopener" aria-label="Open HRMS Portal project">
+        <div class="preview-grid"></div>
+        <div class="preview-tag">// hrms-portal</div>
+        <div class="preview-glyph">HR</div>
+        <div class="preview-overlay"><span>View on GitHub</span><span class="arrow">↗</span></div>
+      </a>
+      <div class="project-body">
+        <div class="project-head">
+          <div>
+            <div class="project-title">HRMS Portal</div>
+            <div class="project-sub">Full-stack Human Resource Management System</div>
+          </div>
+          <a href="https://github.com/aadityahammad-2002" class="gh-link" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+        <p class="project-desc">An end-to-end HR platform with multi-role access for Admin, HR, and Employee users — built to cut manual overhead out of everyday HR operations.</p>
+        <ul class="project-list stagger">
+          <li><strong>Role-based security:</strong> JWT-based authentication and RBAC to protect sensitive employee data.</li>
+          <li><strong>Consistent deployments:</strong> containerized backend services with Docker for environment parity.</li>
+          <li><strong>Automated workflows:</strong> attendance and payroll processes automated to reduce manual HR effort.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Spring Boot</span>
+          <span class="tag">React</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">JWT</span>
+          <span class="tag">Docker</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer style="padding:60px 0;">
+  <div class="wrap" style="text-align:center;">
+    <p class="contact-desc" style="text-align:center;margin:0 auto 24px;">More on the way — want to talk through any of these in detail?</p>
+    <a href="contact.html" class="btn btn-primary magnetic">Get in Touch →</a>
+    <div class="foot-note" style="margin-top:40px;">© 2026 Aaditya Hammad. Built with care.</div>
+  </div>
+</footer>
+
+<a href="#" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+
+<script src="script.js"></script>
+</body>
+</html>
