@@ -260,7 +260,7 @@
       </div>
       <div class="cta-row">
         <a class="btn btn-primary" href="#resume">View Resume</a>
-        <a class="btn btn-ghost" href="#" id="downloadCvBtn">Download CV ↓</a>
+        <a class="btn btn-ghost" href="Aaditya_Resume.pdf" download>Download CV ↓</a>
       </div>
     </div>
 
@@ -392,6 +392,25 @@
         </div>
       </div>
     </div>
+
+    <div class="win proj-card reveal">
+      <div class="win-head">
+        <div class="lights"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+        <div class="path">projects/ci-cd-pipeline</div>
+      </div>
+      <div class="proj-body">
+        <div class="req-line"><span class="method">GET</span> /projects/ci-cd-pipeline — 200 OK</div>
+        <div class="proj-title">CI/CD &amp; Cloud Deploy</div>
+        <p class="proj-desc">Containerized deployment pipeline built during the CoderVu internship — Dockerized services with automated build, test, and release stages via GitHub Actions, cutting manual deployment steps.</p>
+        <div class="proj-tags">
+          <span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">Linux</span>
+        </div>
+        <div class="proj-links">
+          <a class="link-btn" href="https://github.com/aadityahammad-2002" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -403,7 +422,7 @@
       <h2 class="section-title" style="margin-bottom:16px;">resume<span>.pdf</span></h2>
       <p>Snapshot of my education, internship experience, and core skills. Open the full document for project details and internship achievements.</p>
       <div class="cta-row">
-        <button class="btn btn-primary" id="viewResumeBtn">View Resume</button>
+        <a class="btn btn-primary" href="Aaditya_Resume.pdf" target="_blank" rel="noopener">View Resume</a>
       </div>
     </div>
 
@@ -547,11 +566,6 @@
     });
   }, {threshold:0.15});
   revealEls.forEach(el=>io.observe(el));
-
-  // resume view / download -> print styled resume section
-  function openPrintable(){ window.print(); }
-  document.getElementById('viewResumeBtn').addEventListener('click', openPrintable);
-  document.getElementById('downloadCvBtn').addEventListener('click', (e)=>{ e.preventDefault(); openPrintable(); });
 
   // contact form -> mailto
   document.getElementById('messageForm').addEventListener('submit', function(e){
