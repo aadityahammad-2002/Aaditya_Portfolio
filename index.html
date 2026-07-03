@@ -67,6 +67,8 @@
   .tab .dot{width:5px; height:5px; border-radius:50%; background:currentColor; opacity:.5; flex-shrink:0;}
   .tab.brand{color:var(--amber); font-weight:600; letter-spacing:.02em;}
   .tab.brand:hover{color:var(--amber);}
+  .tab.active{color:var(--amber); background:rgba(227,179,65,0.08);}
+  .tab.active .dot{opacity:1;}
 
   section{padding:88px 24px; max-width:1080px; margin:0 auto;}
   .eyebrow{
@@ -238,7 +240,6 @@
 <body>
 
 <nav class="tabbar">
-  <div class="tab brand">aaditya.dev</div>
   <a class="tab" href="#hero"><span class="dot"></span>hero.tsx</a>
   <a class="tab" href="#stack"><span class="dot"></span>stack.json</a>
   <a class="tab" href="#projects"><span class="dot"></span>projects/</a>
@@ -255,7 +256,7 @@
       <p class="role">Aspiring Backend &amp; Full-Stack Developer building AI-integrated services with Spring Boot, Java, and React.</p>
       <div class="meta-lines">
         <div class="line"><span class="k">education</span> B.Tech CSE · Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore · 2025</div>
-        <div class="line"><span class="k">09/2025 - 03/2026</span> Java Developer Intern @ CoderVu InfoTech</div>
+        <div class="line"><span class="k">current</span> Java Developer Intern @ CoderVu InfoTech</div>
       </div>
       <div class="cta-row">
         <a class="btn btn-primary" href="#resume">View Resume</a>
@@ -387,7 +388,7 @@
           <span class="tag">Spring Boot</span><span class="tag">React</span><span class="tag">MySQL</span><span class="tag">JWT</span><span class="tag">Docker</span>
         </div>
         <div class="proj-links">
-          <a class="link-btn" href="https://github.com/aadityahammad-2002/HRMS--Human-Resource-Managment-System-" target="_blank" rel="noopener">GitHub</a>
+          <a class="link-btn" href="https://github.com/aadityahammad-2002" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
     </div>
@@ -520,9 +521,9 @@
   // typing animation in hero terminal
   const term = document.getElementById('typedTerm');
   const lines = [
-    {p:'whoami', o:'aaditya-hammad'},
-    {p:'cat role.txt', o:'Aspiring Backend & Full-Stack Developer'},
-    {p:'cat education.txt', o:'B.Tech CSE · SVVV Indore · 2025'},
+    {p:'whoami', o:'~/Aaditya-Hammad'},
+    {p:'cat role.txt', o:'~/Aspiring Backend & Full-Stack Developer'},
+    {p:'cat education.txt', o:'~/B.Tech CSE · SVVV Indore · 2025'},
     {p:'pwd', o:'~/india'}
   ];
   let li = 0;
@@ -565,6 +566,21 @@
     });
   }, {threshold:0.15});
   revealEls.forEach(el=>io.observe(el));
+
+  // scrollspy: highlight active nav tab based on section in view
+  const navTabs = document.querySelectorAll('.tab[href^="#"]');
+  const spySections = document.querySelectorAll('section[id]');
+  const spyObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const id = entry.target.getAttribute('id');
+        navTabs.forEach(tab=>{
+          tab.classList.toggle('active', tab.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+  spySections.forEach(sec=>spyObserver.observe(sec));
 
   // contact form -> mailto
   document.getElementById('messageForm').addEventListener('submit', function(e){
