@@ -27,6 +27,139 @@
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
+  <!-- ================= AI CHAT WIDGET ================= -->
+<button id="aiChatToggle" aria-label="Ask AI about Aaditya">
+  <span id="aiToggleIcon">✦ ask.ai</span>
+</button>
+
+<div id="aiChatWindow" class="win" style="display:none;">
+  <div class="win-head">
+    <div class="lights"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+    <div class="path">ask.ai — chat with an assistant about Aaditya</div>
+    <button id="aiChatClose" aria-label="Close chat">✕</button>
+  </div>
+  <div id="aiChatMessages"></div>
+  <div class="ai-input-row">
+    <input type="text" id="aiChatInput" placeholder="Ask about his projects, skills, experience..." autocomplete="off">
+    <button id="aiChatSend">→</button>
+  </div>
+</div>
+
+<style>
+  #aiChatToggle{
+    position:fixed; bottom:22px; right:22px; z-index:100;
+    font-family:var(--mono); font-size:13px; font-weight:600;
+    background:var(--amber); color:#151008;
+    border:none; border-radius:24px;
+    padding:12px 20px; cursor:pointer;
+    box-shadow:0 10px 30px -8px rgba(227,179,65,0.5);
+    transition:transform .15s;
+  }
+  #aiChatToggle:hover{transform:translateY(-3px);}
+
+  #aiChatWindow{
+    position:fixed; bottom:22px; right:22px; z-index:101;
+    width:360px; max-width:calc(100vw - 32px);
+    height:480px; max-height:calc(100vh - 100px);
+    display:flex; flex-direction:column;
+  }
+  #aiChatWindow .win-head{position:relative;}
+  #aiChatClose{
+    position:absolute; right:12px; top:9px;
+    background:none; border:none; color:var(--muted);
+    cursor:pointer; font-size:14px;
+  }
+  #aiChatClose:hover{color:var(--red);}
+
+  #aiChatMessages{
+    flex:1; overflow-y:auto; padding:16px;
+    display:flex; flex-direction:column; gap:12px;
+    font-family:var(--sans); font-size:13.5px;
+  }
+  .ai-msg{padding:9px 13px; border-radius:8px; max-width:85%; line-height:1.5;}
+  .ai-msg.bot{background:var(--panel-2); color:var(--text); align-self:flex-start; border:1px solid var(--border-soft);}
+  .ai-msg.user{background:var(--teal); color:#06201c; align-self:flex-end; font-weight:500;}
+  .ai-msg.typing{color:var(--muted-dim); font-family:var(--mono); font-size:12.5px;}
+
+  .ai-input-row{
+    display:flex; gap:8px; padding:12px; border-top:1px solid var(--border);
+  }
+  #aiChatInput{
+    flex:1; background:var(--panel-2); border:1px solid var(--border);
+    border-radius:6px; padding:9px 12px; color:var(--text);
+    font-family:var(--sans); font-size:13.5px;
+  }
+  #aiChatInput:focus{outline:none; border-color:var(--teal);}
+  #aiChatSend{
+    background:var(--amber); color:#151008; border:none;
+    border-radius:6px; width:38px; cursor:pointer; font-weight:700;
+  }
+
+  @media (max-width:480px){
+    #aiChatWindow{ width:calc(100vw - 24px); right:12px; bottom:78px; }
+    #aiChatToggle{ right:12px; bottom:12px; }
+  }
+</style>
+
+<script>
+  (function(){
+    const toggle = document.getElementById('aiChatToggle');
+    const win = document.getElementById('aiChatWindow');
+    const closeBtn = document.getElementById('aiChatClose');
+    const messages = document.getElementById('aiChatMessages');
+    const input = document.getElementById('aiChatInput');
+    const sendBtn = document.getElementById('aiChatSend');
+
+    let history = [];
+    let opened = false;
+
+    function addMsg(text, role){
+      const div = document.createElement('div');
+      div.className = 'ai-msg ' + role;
+      div.textContent = text;
+      messages.appendChild(div);
+      messages.scrollTop = messages.scrollHeight;
+      return div;
+    }
+
+    toggle.addEventListener('click', () => {
+      win.style.display = win.style.display === 'none' ? 'flex' : 'none';
+      if (!opened && win.style.display === 'flex') {
+        opened = true;
+        addMsg("Hey! I'm an AI assistant trained on Aaditya's profile. Ask me about his projects, skills, or experience.", 'bot');
+      }
+    });
+    closeBtn.addEventListener('click', () => win.style.display = 'none');
+
+    async function sendMessage(){
+      const text = input.value.trim();
+      if (!text) return;
+      addMsg(text, 'user');
+      history.push({ role: 'user', content: text });
+      input.value = '';
+      const typingEl = addMsg('typing...', 'typing');
+
+      try{
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: text, history })
+        });
+        const data = await res.json();
+        typingEl.remove();
+        const reply = data.reply || "Sorry, something went wrong.";
+        addMsg(reply, 'bot');
+        history.push({ role: 'assistant', content: reply });
+      } catch(err){
+        typingEl.remove();
+        addMsg("Connection error — try again in a moment.", 'bot');
+      }
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    input.addEventListener('keydown', (e) => { if(e.key === 'Enter') sendMessage(); });
+  })();
+</script>
   body{
     background:
       radial-gradient(ellipse 900px 500px at 15% -10%, rgba(95,214,196,0.07), transparent),
